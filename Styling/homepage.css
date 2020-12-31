@@ -4,21 +4,61 @@
     }
 }
 
+
+li {
+    float: right;
+}
+
+.logo {
+    float: left;
+    height: 48px;
+    width: 48px;
+    margin-left: 1%;
+    /* height: 100%;
+    width: 100%; */
+}
+
 .body {
     height: 100%;
     width: 100%;
     margin: 0%;
     -ms-overflow-style: none; /* IE 11 */
+    overflow: overlay;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
+  } */
+
+
+::-webkit-scrollbar {
+    width: 50px;
+    display:none;
+}
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 20px solid transparent;
+    background-clip: padding-box;
+    border-radius: 50px;
+    background-color: grey;
+
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    border: 20px solid transparent;
+    background-clip: padding-box;
+    border-radius: 50px;
+    background-color: black;
   }
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: black;
     overflow: hidden;
     width: 100%;
     position: fixed; /* Set the navbar to fixed position */
@@ -36,7 +76,6 @@
     background-color: #4CAF50;
     color: white;
 }
-
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -101,6 +140,21 @@
 }
 
 
+.anchor {
+    position: fixed;
+    margin-left:97%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.roundButton {
+    border-radius: 50px;
+    margin-top:200%;
+    height:20px;
+    width: 20px;
+}
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
