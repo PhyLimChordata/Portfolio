@@ -112,9 +112,9 @@
 /* Temporary styling */
 #home {
     height: 51vw;
-    /* background-image: url('../Resources/Images/WebsiteAndy.jpg'); */
-    /* background-position: top center; */
-    /* background-size:100% auto; */
+    background-image: url('../Resources/Images/WebsiteAndy.jpg');
+    background-position: top center;
+    background-size:100% auto;
     width: 100%;
 }
 
