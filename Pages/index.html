@@ -12,13 +12,26 @@
 
 <!-- Toggle between renaming topnav responsive and non-responsive -->
 <script>
-    function myFunction() {
+    function showNavOptions() {
         var x = document.getElementById("topnav");
+        var y = document.getElementById("icon");
         if ( x.className === "topnav" ) {
             x.className += " responsive";
         } else {
             x.className = "topnav";
         }
+
+        if ( y.className === "fa fa-bars") {
+            y.className = "fa fa-close";
+        }
+        else {
+            y.className = "fa fa-bars";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function goTopOfPage() {
+        $("html, body").animate({ scrollTop: 0 }, 1200);
     }
 </script>
 
@@ -29,6 +42,15 @@
 <script>
     $(document).ready(function(){
         $("a").on('click', function(event) {
+            var x = document.getElementById("topnav");
+            var y = document.getElementById("icon");
+            if ( x.className === "topnav" ) {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+            y.className = "fa fa-bars";
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
                 event.preventDefault();
@@ -42,54 +64,29 @@
                 });
             }
         });
-
-        //Same logic as above
-        $("button").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 1200, function(){
-                    window.location.hash = hash;
-                });
-            }
-        });
     });
 </script>
 
 <body class="body">
     <div class="topnav" id="topnav">
-        <img class="logo" src="../Resources/Images/AP.png"></img>
+        <label id="andylogo" onClick="goTopOfPage()">
+            ANDY PHYLIM
+        </label>
+
         <!-- li to have the links float right -->
-        <li>
+        <div class="navlinks">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#impossibleList">Impossible List</a>
             <a href="#contact">Contact</a>
-            <!-- hamburger icon; javascript:void(0) == undefined -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </li>
+            <!-- hamburger icon-->
+            <i class="fa fa-bars" id="icon" onClick="showNavOptions()"></i>
+
+        </div>
        
     </div>
 
-    <!-- <div class="anchor">
-        <button class="roundButton"></button>
-        <button  class="roundButton" ></button>
-        <button  class="roundButton" ></button>
-        <button  class="roundButton" ></button>
-        <button  class="roundButton" ></button>
-    </div> -->
-
     <div id="home">
-        <div class = "card">
-            I'm a Developer, Artist, and Fitness Enthusiast. Always trying something new and having fun along the way. Building a life where I can learn and try new things every single day.
-            <button onclick="location.href='./about.html'" type = "button">
-                Find Out More
-            </button>
-        </div>
     </div>
     
     <div class="about" id="about">

@@ -35,25 +35,33 @@
   } */
 
 /* *********************************************************************** */
+#andylogo {
+    font-family: 'CommissionerExtraBold';
+    font-size: 40px;
+    float:left;
+    color: #ffffff;
+    position: relative;
+    padding-top: 8px;
+    padding-left: 25px;
+}
 
-li {
+#andylogo:hover {
+    color: orange;
+    position: relative;
+    padding-top: 8px;
+    padding-left: 25px;
+}
+
+.navlinks {
     float: right;
 }
 
-.logo {
-    float: left;
-    height: 48px;
-    width: 48px;
-    margin-left: 1%;
-    margin-top: 8px;
-}
-
-.topnav {
+#topnav {
+    /* background-color: transparent; */
     background-color: #212121;
-    overflow: hidden;
     width: 100%;
     position: fixed;
-    top:0;
+    top: 0;
 }
 
 .topnav a {
@@ -61,9 +69,11 @@ li {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 22px 28px;
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     font-family: 'CommissionerMedium';
 }
 
@@ -71,9 +81,18 @@ li {
     color: orange;
 }
 
-/* Hide links in topnav when on web */
-.topnav .icon {
+/* Hide links when on web */
+.topnav i {
     display: none;
+    color: #f2f2f2;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    font-size: 18px;
+}
+
+.topnav i:hover {
+    color: orange;
 }
 
 /* *********************************************************************** */
@@ -92,11 +111,12 @@ li {
 
 /* Temporary styling */
 #home {
-    height: 300px;
-    background-color: blue;
+    height: 51vw;
+    /* background-image: url('../Resources/Images/WebsiteAndy.jpg'); */
+    /* background-position: top center; */
+    /* background-size:100% auto; */
     width: 100%;
 }
-
 
 #about {
     height: 300px;
@@ -170,12 +190,12 @@ li {
 /* *********************************************************************** */
 /* Mobile Css */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .topnav a {
         display: none;
     }
 
-    .topnav a.icon {
+    .topnav i {
         float: right;
         display: block;
     }
@@ -184,11 +204,18 @@ li {
         position: relative;
     }
     
-    .topnav.responsive a.icon {
+    .topnav.responsive i {
         position: absolute;
         right: 0;
         top: 0;
     }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
 
     .topnav.responsive a {
         float: none;
@@ -201,6 +228,11 @@ li {
     .flexBoxes {
         width: 90%;
     }
+}
+
+@font-face {
+    font-family: 'CommissionerExtraBold';
+    src: local('Commissioner'), url(../Resources/Fonts/Commissioner/Commissioner-ExtraBold.ttf) format('truetype');
 }
 
 @font-face {
