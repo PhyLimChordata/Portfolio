@@ -118,18 +118,78 @@
     width: 100%;
 }
 
+/* *********************************************************************** */
+
 #about {
-    height: 300px;
-    background-color: orange;
+    height: auto;
+    background-color: #212121;
     width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutTitle {
+    font-size: 6vw;
+    font-family: 'CommissionerExtraBold';
+    color: #f2f2f2;
+}
+
+#aboutBody {
+    font-size: 1.6vw;
+    width: 70%;
+    text-align: center;
+    font-family: 'CommissionerMedium';
+    color: #f2f2f2;
+    display: block;
+}
+
+#aboutEmphasis {
+    font-size: 2.2vw;
+    width: 90%;
+    text-align: center;
+    font-family: 'CommissionerBold';
+    color: #f2f2f2;
+    display: block;
+    line-height: 1.2vw;
+}
+
+.orangeText {
+    font-size: 2vw;
+    font-family: 'CommissionerBold';
+    color: orange;
 }
 
 
-/* #projects {
-    height: 300px;
-    background-color: red;
+/* *********************************************************************** */
+
+
+#projects {
+    height: auto;
+    background-color: #212121;
     width: 100%;
-} */
+}
+
+.artProjects {
+    position: relative;
+    height: 20vw;
+    width: 100%;
+    background-image: url('../Resources/Images/andy-plush-blue.png');
+    background-size: cover;
+    border: solid 1px blue;
+}
+
+.codingProjects {
+    position: relative;
+    height: 20vw;
+    width: 100%;
+    background-image: url('../Resources/Images/andy-plush-blue.png');
+    background-size: cover;
+    border: solid 1px blue;
+}
 
 #impossibleList {
     height: 300px;
@@ -145,26 +205,7 @@
 
 /* *********************************************************************** */
 
-.anchor {
-    position: fixed;
-    margin-left:97%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.roundButton {
-    border-radius: 50px;
-    margin-top:200%;
-    height:20px;
-    width: 20px;
-}
-
-/* *********************************************************************** */
-
 .flexDivs {
-    background-color: #4CAF50;
     width: 100%;
     height: auto;
     display: flex;
@@ -174,9 +215,9 @@
 }
 
 .flexBoxes {
-    width: 45%;
-    height: 300px;
-    border: solid 1px blue;
+    width: 48%;
+    
+    border:solid 1px red;
     box-sizing: border-box;
 }
 
@@ -185,6 +226,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
 }
 
 /* *********************************************************************** */
@@ -233,6 +276,11 @@
 @font-face {
     font-family: 'CommissionerExtraBold';
     src: local('Commissioner'), url(../Resources/Fonts/Commissioner/Commissioner-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'CommissionerBold';
+    src: local('Commissioner'), url(../Resources/Fonts/Commissioner/Commissioner-Bold.ttf) format('truetype');
 }
 
 @font-face {
