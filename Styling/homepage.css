@@ -1,0 +1,409 @@
+/* *********************************************************************** */
+
+#andylogo {
+    font-family: 'CommissionerExtraBold';
+    font-size: 40px;
+    float:left;
+    color: #ffffff;
+    position: relative;
+    padding-top: 8px;
+    padding-left: 25px;
+    animation: unhoverChangeTextColour 0.5s;
+}
+
+#andylogo:hover {
+    color: orange;
+    position: relative;
+    padding-top: 8px;
+    padding-left: 25px;
+    animation: hoverChangeTextColour 0.6s;
+}
+
+.navlinks {
+    float: right;
+}
+
+#topnav {
+    /* background-color: transparent; */
+    background-color: #0a0a0a;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'CommissionerMedium';
+}
+
+.topnav a:hover {
+    animation: hoverChangeTextColour 0.5s;
+}
+
+/* Hide links when on web */
+.topnav i {
+    display: none;
+    color: #f2f2f2;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    font-size: 18px;
+}
+
+.topnav i:hover {
+    color: orange;
+}
+
+/* *********************************************************************** */
+
+.body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+
+    /* -ms-overflow-style: none;
+    overflow: overlay; */
+}
+
+
+/* *********************************************************************** */
+
+/* Temporary styling */
+#home {
+    height: 51vw;
+    background-image: url('../Resources/Images/WebsiteAndy.jpg');
+    background-position: top center;
+    background-size:100% auto;
+    width: 100%;
+}
+
+/* *********************************************************************** */
+
+#about {
+    height: auto;
+    background-color: #212121;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutTitle {
+    font-size: 6vw;
+    font-family: 'CommissionerExtraBold';
+    color: #f2f2f2;
+}
+
+#aboutBody {
+    font-size: 1.4vw;
+    width: 70%;
+    text-align: center;
+    font-family: 'CommissionerMedium';
+    color: #f2f2f2;
+    display: block;
+}
+
+#aboutMiniBody {
+    font-size: 1.2vw;
+    width: 50%;
+    text-align: center;
+    font-family: 'CommissionerMedium';
+    color: #f2f2f2;
+    display: block;
+}
+
+#aboutEmphasis {
+    font-size: 3vw;
+    width: 90%;
+    text-align: center;
+    font-family: 'CommissionerBold';
+    color: #f2f2f2;
+    display: block;
+    line-height: 1.2vw;
+}
+
+.orangeText {
+    font-size: 2vw;
+    font-family: 'CommissionerBold';
+    color: orange;
+}
+
+/* *********************************************************************** */
+
+#projects {
+    height: auto;
+    background-color: #212121;
+    width: 100%;
+}
+
+.codingProjects {
+    position: relative;
+    height: 23vw;
+    width: 100%;
+    background-image: url('../Resources/Images/FeedMe.PNG');
+    background-size: cover;
+    border-radius: 4px;
+}
+
+.artProjects {
+    position: relative;
+    height: 23vw;
+    width: 100%;
+    background-image: url('../Resources/Images/Ghibli.jpg');
+    background-size: cover;
+    border-radius: 4px;
+}
+
+a.projectsButton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    font-family: 'CommissionerBold';
+    text-decoration: none;
+    color: black;
+    background-color: #e29200;
+    font-size: 1.2vw;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 20px;
+    animation: unhoverChangeButtonColour 0.6s;
+}
+
+a.projectsButton:hover {
+    animation: hoverChangeButtonColour 0.6s;
+}
+
+/* *********************************************************************** */
+
+#impossibleList {
+    height: auto;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.impossibleListImage {
+    margin-top: 150px;
+    margin-bottom: 110px;
+    margin-left: 5vw;
+    position: relative;
+    height: 30vw;
+    width: 85%;
+    background-image: url('../Resources/Images/Handstands.jpg');
+    background-size: cover;
+    border-radius: 4px;
+    border-radius: 8px;
+}
+
+#impossibleListBody {
+    font-size: 1.4vw;
+    margin-right: 10vw;
+    width: 100%;
+    text-align: left;
+    font-family: 'CommissionerMedium';
+    color: #212121;
+    display: block;
+}
+
+a.impossibleListButton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    font-family: 'CommissionerBold';
+    text-decoration: none;
+    color: #f2f2f2;
+    background-color: #e29200;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 10vw;
+    padding: 20px;
+    animation: unhoverChangeButtonColour 0.6s;
+}
+
+a.impossibleListButton:hover {
+    animation: hoverChangeButtonColour 0.6s;
+}
+
+/* *********************************************************************** */
+
+
+#contact {
+    height: auto;
+    background-color: #00abe0;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#contactTitle {
+    font-size: 4vw;
+    font-family: 'CommissionerExtraBold';
+    color: #f2f2f2;
+}
+
+#githubIcon {
+    opacity: 80%;
+}
+
+#githubIcon:hover {
+    opacity: 100%;
+}
+
+#linkedInIcon {
+    opacity: 80%;
+}
+
+#linkedInIcon:hover {
+    opacity: 100%;
+}
+
+#emailIcon {
+    opacity: 80%;
+}
+
+#emailIcon:hover {
+    opacity: 100%;
+}
+
+#instagramIcon {
+    opacity: 80%;
+}
+
+#instagramIcon:hover {
+    opacity: 100%;
+}
+
+#backToTopButton {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    opacity: 90%;
+}
+
+#backToTopButton:hover {
+    opacity: 100%;
+}
+
+.contactIconDiv {
+    height: auto;
+    width: auto;
+    padding-top: 20px;
+}
+
+/* *********************************************************************** */
+
+.flexDivs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.flexBoxes {
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    padding: 30px;
+}
+
+/* *********************************************************************** */
+/* Mobile Css */
+
+@media screen and (max-width: 800px) {
+    .topnav a {
+        display: none;
+    }
+
+    .topnav i {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    
+    .topnav.responsive i {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+
+    .topnav.responsive a {
+        float: none;
+        margin-right: 20px;
+        display: block;
+        text-align: left;
+    }
+
+    .card {
+        padding-top: 10px;
+    }
+}
+
+/* *********************************************************************** */
+
+@font-face {
+    font-family: 'CommissionerExtraBold';
+    src: local('Commissioner'), url(../Resources/Fonts/Commissioner/Commissioner-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'CommissionerBold';
+    src: local('Commissioner'), url(../Resources/Fonts/Commissioner/Commissioner-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'CommissionerMedium';
+    src: local('Commissioner'), url(../Resources/Fonts/Commissioner/Commissioner-Medium.ttf) format('truetype');
+}
+
+/* *********************************************************************** */
+
+@keyframes hoverChangeButtonColour {
+    from {background-color: #e29200;}
+    to {background-color: #ffab10;}
+}
+
+@keyframes unhoverChangeButtonColour {
+    from {background-color: #ffab10;}
+    to {background-color: #e29200;}
+}
+
+@keyframes hoverChangeTextColour {
+    0% {color: white;}
+    100% {color: orange;}
+}
+
+@keyframes unhoverChangeTextColour {
+    from {color: orange;}
+    to {color: white;}
+}
+

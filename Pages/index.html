@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy's Portfolio</title>
+    
+    <link rel="stylesheet" href="../Styling/homepage.css"/>
+    <!-- hamburger menu icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- Toggle between renaming topnav responsive and non-responsive -->
+<script>
+    function showNavOptions() {
+        var x = document.getElementById("topnav");
+        var y = document.getElementById("icon");
+        if ( x.className === "topnav" ) {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+
+        if ( y.className === "fa fa-bars") {
+            y.className = "fa fa-close";
+        }
+        else {
+            y.className = "fa fa-bars";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function goTopOfPage() {
+        $("html, body").animate({ scrollTop: 0 }, 1200);
+    }
+</script>
+
+<!-- Smooth Scrolling -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Smooth Scrolling added to all links and buttons -->
+<script>
+    $(document).ready(function(){
+        $("a").on('click', function(event) {
+            var x = document.getElementById("topnav");
+            var y = document.getElementById("icon");
+            if ( x.className === "topnav" ) {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+            y.className = "fa fa-bars";
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                //Smooth scrolling will take 1200 ms 
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1200, function(){
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+</script>
+
+<body class="body">
+    <div class="topnav" id="topnav">
+        <label id="andylogo" onClick="goTopOfPage()">
+            ANDY PHYLIM
+        </label>
+
+        <!-- li to have the links float right -->
+        <div class="navlinks">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#impossibleList">Impossible List</a>
+            <a href="#contact">Contact</a>
+            <!-- hamburger icon-->
+            <i class="fa fa-bars" id="icon" onClick="showNavOptions()"></i>
+
+        </div>
+       
+    </div>
+
+    <div id="home">
+    </div>
+    
+    <div id="about">
+        <label id="aboutTitle">
+            WHO AM I?
+        </label>
+
+        <p id="aboutBody">
+            My name is <span class="orangeText">Andy PhyLim</span> and I'm a third-year student at the <span class="orangeText">University of Toronto</span>.
+            <p id="aboutMiniBody">
+                I am currently pursuing a degree in Software Engineering with 2+ years of experience working as a software developer in agile environments. 
+                <br></br>
+                I also have an interest in graphic design, visual arts, and exploring other creative mediums. 
+                <br></br>
+                I wish to be able to combine these two skills and be able to provide them in such a way that could improve the the experience a user has on an application. 
+            </p>
+        </p>
+        <br></br>
+        <p id="aboutEmphasis">
+            I'm a <span style="color: orange">Developer, Artist,</span> and <span style="color: orange">Lifelong Student.</span>
+        </p>
+    </div>
+
+    <div class = "flexDivs" id="projects">
+        <div class="flexBoxes">
+            <div class = "card">
+                <div class="codingProjects"></div>
+                <a href="https://github.com/PhyLimChordata" class="projectsButton" target="_blank" rel="noopener noreferrer">Check out my Code</a>
+            </div>
+        </div>
+
+        <div class="flexBoxes">
+            <div class = "card">
+                <div class="artProjects"></div>
+                <a href="https://www.instagram.com/andydabbles/" class="projectsButton" target="_blank" rel="noopener noreferrer">Check out my Art</a>
+            </div>
+        </div>        
+    </div>
+
+    <div class = "flexDivs" id = "impossibleList">
+        <!-- <label id="impossibleListTitle">
+            <s>IM</s>POSSIBLE LIST
+        </label> -->
+        <div class="flexBoxes">
+            <img class="impossibleListImage"></img>
+        </div>
+
+        <div class="flexBoxes">
+            <div class = "card">
+                <p id="impossibleListBody">
+                    The Impossible List (inspired by Youtuber Thomas Frank) is a personal list of accomplishments and goals I want to achieve. 
+                    <br></br>
+                    It's similar to the Bucket List however the Impossible List takes on a more proactive pursuit towards tracking and achieving goals. 
+                    <br></br>
+                    It does this by forcing the user to review and update iteratively. 
+
+                </p>
+                <a href="https://docs.google.com/document/d/17Ne8YPlozHRvQKYgtPqERhJNwDepYiGF_RMsAGsYyrk/edit?usp=sharing" class="impossibleListButton" target="_blank" rel="noopener noreferrer">What's On My List?</a>
+            </div>
+        </div>        
+    </div>
+
+    <div id="contact">
+        <label id="contactTitle">
+            CONTACT ME
+        </label>
+       <div class='contactIconDiv'>
+        <a id="githubIcon" href="https://github.com/PhyLimChordata" target="_blank" rel="noopener noreferrer">
+            <img src="../Resources/Images/Github.png" width=100" height="100">
+         </a>
+         <a id="linkedInIcon" href="https://www.linkedin.com/in/andypl/" target="_blank" rel="noopener noreferrer">
+            <img src="../Resources/Images/Linkedin.png" width=100" height="100">
+         </a>
+         <a id="emailIcon" href="mailto:andyphyl00@gmail.com"">
+            <img src="../Resources/Images/Email.png" width=100" height="100">
+         </a>
+         <a id="instagramIcon" href="https://www.instagram.com/andydabbles/" target="_blank" rel="noopener noreferrer">
+            <img src="../Resources/Images/Instagram.png" width=100" height="100">
+         </a>
+       </div>
+       
+        <img id='backToTopButton' src="../Resources/Images/UpArrow.png" width=100" height="100" onClick="goTopOfPage()">
+        
+    </div>
+</body>
+
+</html>
