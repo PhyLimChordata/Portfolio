@@ -80,10 +80,23 @@
 /* Temporary styling */
 #home {
     height: 51vw;
-    background-image: url('../Resources/Images/WebsiteAndy.jpg');
+    background-image: url('../Resources/Images/WebsiteAndy2.jpg');
     background-position: top center;
     background-size:100% auto;
     width: 100%;
+    background-attachment: fixed;
+}
+
+#signature {
+    position: absolute;
+    height: 20vw;
+    width: 35%;
+    left: 35%;
+    background-image: url('../Resources/Images/Signature-Clean.png');
+    background-size: cover;
+    background-position: center;
+    top: 18vw;
+    z-index: 5;
 }
 
 /* *********************************************************************** */
@@ -100,10 +113,35 @@
     justify-content: center;
 }
 
+#about:before {
+    position: absolute;
+    width: 100%;
+    height: 8vw;
+    top: 50vw;
+    left: 0;
+    background-color: #212121;
+    content: '';
+    transform: skewY(7deg);
+    z-index: 1;
+}
+
+#about:after {
+    position: absolute;
+    width: 100%;
+    height: 8vw;
+    top: 50vw;
+    right: 0;
+    background-color: #212121;
+    content: '';
+    transform: skewY(-7deg);
+    z-index: 1;
+}
+
 #aboutTitle {
     font-size: 6vw;
     font-family: 'CommissionerExtraBold';
     color: #f2f2f2;
+    z-index: 2;
 }
 
 #aboutBody {
@@ -253,6 +291,7 @@ a.impossibleListButton:hover {
 }
 
 #githubIcon {
+    color: #00abe0;
     opacity: 80%;
 }
 
@@ -261,6 +300,7 @@ a.impossibleListButton:hover {
 }
 
 #linkedInIcon {
+    color: #00abe0;
     opacity: 80%;
 }
 
@@ -269,6 +309,7 @@ a.impossibleListButton:hover {
 }
 
 #emailIcon {
+    color: #00abe0;
     opacity: 80%;
 }
 
@@ -277,6 +318,7 @@ a.impossibleListButton:hover {
 }
 
 #instagramIcon {
+    color: #00abe0;
     opacity: 80%;
 }
 
@@ -406,4 +448,3 @@ a.impossibleListButton:hover {
     from {color: orange;}
     to {color: white;}
 }
-
